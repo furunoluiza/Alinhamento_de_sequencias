@@ -1,6 +1,6 @@
 import numpy
 import blosum62
-from class import direction, cell //pq n ta funcionando?
+
 
 class direction:
     diagonal = 0
@@ -11,7 +11,7 @@ class direction:
 
 class cell:
     score = 0
-    direcao = direction.none
+    direction = direction.none
 
 def make_matrix(seq_v, seq_w):
     matrix = numpy.empty((len(seq_v) + 1, len(seq_w) + 1), dtype=cell)
@@ -22,6 +22,7 @@ def make_matrix(seq_v, seq_w):
         matrix[0][j] = cell()
 
     return matrix
+
 
 def pairwise_alignment(seq_v, seq_w, blosum, penalty):
     matrix = make_matrix(seq_v, seq_w)
@@ -48,12 +49,12 @@ def pairwise_alignment(seq_v, seq_w, blosum, penalty):
     new_seq_w = ""
 
     while i > 0 or j > 0:
-        if i > 0 and j > 0 and matrix[i][j].direcao == direction.diagonal:
+        if i > 0 and j > 0 and matrix[i][j].direction == direction.diagonal:
             new_seq_v = seq_v[i - 1] + new_seq_v
             new_seq_w = seq_w[j - 1] + new_seq_w
             i -= 1
             j -= 1
-        elif i > 0 and matrix[i][j].direcao == direction.left:
+        elif i > 0 and matrix[i][j].direction == direction.left:
             new_seq_v = "-" + new_seq_v
             new_seq_w = seq_w[i - 1] + new_seq_w
             i -= 1
