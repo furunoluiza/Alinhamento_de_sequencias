@@ -1,5 +1,4 @@
 import numpy
-import blosum62
 
 
 class direction: 
@@ -46,20 +45,32 @@ def pairwise_alignment(seq_v, seq_w, blosum, penalty):
 
     new_seq_v = ""
     new_seq_w = ""
+    i = len(seq_v)
+    j = len(seq_w)
 
-    while i > 0 or j > 0:
-        if i > 0 and j > 0 and matrix[i][j].direction == direction.diagonal:
+    while i > 0 and j > 0:
+        if matrix[i][j].direction == direction.diagonal:
             new_seq_v = seq_v[i - 1] + new_seq_v
             new_seq_w = seq_w[j - 1] + new_seq_w
             i -= 1
             j -= 1
-        elif i > 0 and matrix[i][j].direction == direction.left:
-            new_seq_v = "-" + new_seq_v
-            new_seq_w = seq_w[i - 1] + new_seq_w
+        elif matrix[i][j].direction == direction.left:
+            new_seq_v = seq_v[i - 1] + new_seq_v
+            new_seq_w = "-" + new_seq_w
             i -= 1
         else:
-            new_seq_v = seq_v[j - 1] + new_seq_v
-            new_seq_w = "-" + new_seq_w
+            new_seq_v = "-" + new_seq_v
+            new_seq_w = seq_w[j - 1] + new_seq_w
             j -= 1
 
+    while i > 0:
+        new_seq_v = seq_v[i - 1] + new_seq_v
+        new_seq_w = "-" + new_seq_w
+        i -= 1
+
+    while j > 0:
+        new_seq_v = "-" + new_seq_v
+        new_seq_w = seq_w[j - 1] + new_seq_w
+        j -= 1
+    
     return (new_seq_v, new_seq_w)
