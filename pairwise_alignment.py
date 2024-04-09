@@ -1,5 +1,4 @@
 import numpy
-import blosum62
 
 
 class direction: 
@@ -55,7 +54,7 @@ def pairwise_alignment(seq_v, seq_w, blosum, penalty):
             new_seq_w = seq_w[j - 1] + new_seq_w
             i -= 1
             j -= 1
-        elif matrix[i][j].direction == direction.up:
+        elif matrix[i][j].direction == direction.left:
             new_seq_v = seq_v[i - 1] + new_seq_v
             new_seq_w = "-" + new_seq_w
             i -= 1
