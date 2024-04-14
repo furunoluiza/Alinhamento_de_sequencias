@@ -53,7 +53,7 @@ def pairwise_alignment(seq_v, seq_w, blosum, penalty):
             new_seq_w = seq_w[j - 1] + new_seq_w
             i -= 1
             j -= 1
-        elif i > 0 and matrix[i][j].direction == direction.up:
+        elif matrix[i][j].direction == direction.up:
             new_seq_v = "-" + new_seq_v
             new_seq_w = seq_w[i - 1] + new_seq_w
             i -= 1
