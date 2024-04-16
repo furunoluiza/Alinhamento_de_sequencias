@@ -1,4 +1,4 @@
-import numpy
+import numpy as np
 
 
 class direction: 
@@ -12,7 +12,7 @@ class cell:
     direction = direction.none
 
 def make_matrix(seq_v, seq_w):
-    matrix = numpy.empty((len(seq_v) + 1, len(seq_w) + 1), dtype=cell)
+    matrix = np.empty((len(seq_v) + 1, len(seq_w) + 1), dtype=cell)
     for i in range(len(seq_v) + 1):
         matrix[i][0] = cell()
 
