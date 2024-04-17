@@ -1,14 +1,13 @@
 # Alinhamento de Sequências
-Esse projeto foi desenvolvido durante a disciplina de "Algoritmos para Bioinformática" da Universidade Federal de Minas Gerais (UFMG).
+Esse projeto foi desenvolvido como trabalho prático da disciplina de "Algoritmos para Bioinformática" da Universidade Federal de Minas Gerais (UFMG).
 
 ## Descrição do Projeto
-O objetivo deste trabalho é implementar o algoritmo de Needleman-Wunsch para construir alinhamentos globais par-a-par de sequências de proteínas. 
-Foi utilizado a matriz BLOSUM62, que traz em cada célula a penalidade de se substituir um aminoácido por outro ou mesmo a manutenção dele.
+O objetivo deste projeto é implementar o algoritmo de Needleman-Wunsch para realizar alinhamentos globais par-a-par de sequências de proteínas. O algoritmo utiliza a matriz BLOSUM62, que contém penalidades para substituições e manutenção de aminoácidos.
 
 ## How to Use
 
 
-1. Instale a biblioteca necessária
+1. Instale a biblioteca "numpy"
 
 ```bash
 pip install numpy
@@ -26,4 +25,4 @@ git@github.com:furunoluiza/align_seq.git
 python3 ./main.py
 ```
 
-Como input, o programa pedirá as duas sequências de aminoácidos e a penalidade. O output será as sequências alinhadas.
+O programa solicitará como entrada as duas sequências de aminoácidos e a penalidade. O resultado será as sequências alinhadas.
