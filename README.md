@@ -6,6 +6,7 @@ O objetivo deste projeto é implementar o algoritmo de Needleman-Wunsch para rea
 
 ## Integrantes do projeto
 Luíza Furuno Machado
+
 Laura de Freitas Pimentel dos Anjos
 
 ## How to Use
