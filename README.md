@@ -4,6 +4,10 @@ Esse projeto foi desenvolvido como trabalho prático da disciplina de "Algoritmo
 ## Descrição do Projeto
 O objetivo deste projeto é implementar o algoritmo de Needleman-Wunsch para realizar alinhamentos globais par-a-par de sequências de proteínas. O algoritmo utiliza a matriz BLOSUM62, que contém penalidades para substituições e manutenção de aminoácidos.
 
+## Integrantes do projeto
+Luíza Furuno Machado
+Laura de Freitas Pimentel dos Anjos
+
 ## How to Use
 
 
