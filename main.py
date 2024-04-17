@@ -9,4 +9,4 @@ seq_w = seq_w.upper()
 
 (seq_v_aligned, seq_w_aligned) = pairwise_alignment(seq_v, seq_w, blosum, penalty)
 
-print("Nova sequencia v: ", seq_v_aligned, "\nNova sequencia w: ", seq_w_aligned)
+print(f'Aligned sequences:\n{seq_v_aligned}\n{seq_w_aligned}')
