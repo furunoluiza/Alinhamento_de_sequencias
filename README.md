@@ -9,7 +9,7 @@ Luíza Furuno Machado
 
 Laura de Freitas Pimentel dos Anjos
 
-## How to Use
+## Como usar
 
 
 1. Instale a biblioteca "numpy"
