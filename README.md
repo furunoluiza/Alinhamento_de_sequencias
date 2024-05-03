@@ -18,10 +18,10 @@ Laura de Freitas Pimentel dos Anjos
 pip install numpy
 ```
 
-2. Clone o repositório "align_seq" para sua máquina local
+2. Clone o repositório "align_seq" para sua máquina local e entre no diretório
    
 ```sh
-git@github.com:furunoluiza/align_seq.git
+git@github.com:furunoluiza/align_seq.git && cd align_seq
 ```
 
 3. Execute o programa
